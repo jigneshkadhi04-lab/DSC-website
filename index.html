@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dholera Smart City - Premium Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <aside class="hero-sidebar">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div>
+                    <h1>DHOLERA</h1>
+                    <p>SMART CITY</p>
+                </div>
+            </div>
+
+            <div class="hero-main-content">
+                <div class="model-placeholder">
+                    <img src="https://i.pinimg.com/1200x/4a/ad/35/4aad357189f2273997a7f409fe00be48.jpg" alt="Ambassador">
+                </div>
+                <div class="hero-text-group">
+                    <span class="tagline">FUTURISTIC LIVING INSPIRED BY TOMORROW</span>
+                    <h2>Live Smart.<br>Live <span class="gradient-text">Future.</span></h2>
+                    <p>Premium Residential & Commercial Spaces in Dholera Smart City</p>
+                    <button class="btn-primary">Explore Projects <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="badge-card">
+                <i class="fa-solid fa-building-shield badge-icon"></i>
+                <div>
+                    <h4>India's Most Advanced Smart City</h4>
+                    <p>Powered by Innovation. Driven by Sustainability.</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <nav class="navbar">
+                <div id="settings-menu-panel" class="settings-drawer">
+    <div class="drawer-header">
+        <h3><i class="fa-solid fa-sliders"></i> Interface Settings</h3>
+        <button class="drawer-close" onclick="toggleSettingsDrawer()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="drawer-body">
+        <div class="setting-option-card">
+            <div class="option-info">
+                <strong>Color Scheme Mode</strong>
+                <p>Switch between dark neon and high-contrast ambient themes.</p>
+            </div>
+            <div class="toggle-switch-wrapper">
+                <label class="switch-container">
+                    <input type="checkbox" id="theme-toggle-checkbox" onchange="toggleDashboardTheme()">
+                    <span class="switch-slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="setting-option-card">
+            <div class="option-info">
+                <strong>Dashboard Scale</strong>
+                <p>Adjust baseline interface scale for optimal readability.</p>
+            </div>
+            <div class="scale-btn-group">
+                <button class="scale-btn active" id="scale-btn-normal" onclick="changeDashboardScale('normal')">A</button>
+                <button class="scale-btn" id="scale-btn-large" onclick="changeDashboardScale('large')">A+</button>
+            </div>
+        </div>
+
+        <div class="setting-option-card">
+            <div class="option-info">
+                <strong>Clear Stored Settings</strong>
+                <p>Reset theme configurations back to production defaults.</p>
+            </div>
+            <button class="btn-secondary text-center w-full" style="padding: 10px; font-size: 11px;" onclick="resetDashboardDefaults()">Reset Variables</button>
+        </div>
+    </div>
+</div>
+                <div class="nav-links">
+                    <a href="#" class="active">Home</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Smart City</a>
+                    <a href="#">Amenities</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-action">Book a Visit</button>
+                    <button class="btn-icon-nav"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </nav>
+
+            <div class="scroll-indicator">
+                <i class="fa-solid fa-computer-mouse"></i> Scroll to explore
+            </div>
+
+            <div class="cards-slider">
+                <div class="property-card" onclick="selectProperty(this, 'Sunrise Residency', 'Central Dholera', '₹ 45 Lacs*', '2 & 3 BHK Apartments', 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=500')">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=500" alt="Sunrise Residency">
+                    </div>
+                    <div class="card-details">
+                        <h3>Sunrise Residency</h3>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Central Dholera</p>
+                        <div class="card-footer">
+                            <div>
+                                <div class="price">₹ 45 Lacs*</div>
+                                <div class="bhk">2 & 3 BHK Apartments</div>
+                            </div>
+                            <div class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card featured active" onclick="selectProperty(this, 'Skyline Heights', 'Global Gate, Dholera', '₹ 78 Lacs*', '3 & 4 BHK Luxury Apartments', 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=500')">
+                    <span class="featured-badge">Featured</span>
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=500" alt="Skyline Heights">
+                    </div>
+                    <div class="card-details">
+                        <h3>Skyline Heights</h3>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Global Gate, Dholera</p>
+                        <div class="card-footer">
+                            <div>
+                                <div class="price">₹ 78 Lacs*</div>
+                                <div class="bhk">3 & 4 BHK Luxury Apartments</div>
+                            </div>
+                            <div class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" onclick="selectProperty(this, 'Greenfield Enclave', 'Knowledge & IT Zone', '₹ 55 Lacs*', '2 & 3 BHK Apartments', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=500')">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=500" alt="Greenfield Enclave">
+                    </div>
+                    <div class="card-details">
+                        <h3>Greenfield Enclave</h3>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Knowledge & IT Zone</p>
+                        <div class="card-footer">
+                            <div>
+                                <div class="price">₹ 55 Lacs*</div>
+                                <div class="bhk">2 & 3 BHK Apartments</div>
+                            </div>
+                            <div class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-branding">
+                <h2>Where <span class="accent-pink">Innovation</span> Meets <span class="accent-blue">Lifestyle</span></h2>
+                <div class="stats-row">
+                    <div class="stat-item"><strong>920+</strong><p>Acres of Development</p></div>
+                    <div class="stat-item"><strong>500+</strong><p>Happy Families</p></div>
+                    <div class="stat-item"><strong>50+</strong><p>World Class Amenities</p></div>
+                    <div class="stat-item"><strong>100%</strong><p>Smart Infrastructure</p></div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="details-panel">
+    <div class="panel-header" style="justify-content: flex-end;">
+        <div class="right-actions">
+            <button class="panel-icon-btn"><i class="fa-regular fa-heart"></i></button>
+            <button class="panel-icon-btn"><i class="fa-solid fa-share-nodes"></i></button>
+        </div>
+    </div>
+...
+
+            <div class="property-focus-info">
+                <h2 id="focus-title">Skyline Heights</h2>
+                <p id="focus-location" class="location"><i class="fa-solid fa-location-dot"></i> Global Gate, Dholera Smart City</p>
+            </div>
+
+            <div class="amenity-grid">
+                <div class="amenity-badge"><i class="fa-solid fa-bed"></i><span>3 & 4 BHK</span></div>
+                <div class="amenity-badge"><i class="fa-solid fa-gem"></i><span>Luxury</span></div>
+                <div class="amenity-badge"><i class="fa-solid fa-house-laptop"></i><span>Smart Living</span></div>
+                <div class="amenity-badge"><i class="fa-solid fa-shield-halved"></i><span>24/7 Security</span></div>
+            </div>
+
+            <div class="media-preview-box">
+                <img id="focus-media-img" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=500" alt="Preview">
+                <button class="video-play-btn"><i class="fa-solid fa-play"></i></button>
+                <div class="gallery-thumbs">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=150" alt="thumb">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=150" alt="thumb">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=150" alt="thumb">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=150" alt="thumb">
+                </div>
+            </div>
+
+            <p class="property-desc">
+                Experience the next level of luxury living with world-class amenities, smart home features, and breathtaking views of Dholera's futuristic skyline.
+            </p>
+
+            <div class="action-row">
+                <button class="btn-primary text-center w-full">Book a Visit</button>
+                <button class="btn-secondary text-center w-full">Download Brochure</button>
+            </div>
+
+            <div class="location-advantages">
+                <h3>Location Advantage</h3>
+                <div class="advantage-grid">
+                    <div class="adv-item"><i class="fa-solid fa-train"></i><strong>5 min</strong><p>Metro Rail</p></div>
+                    <div class="adv-item"><i class="fa-solid fa-plane"></i><strong>10 min</strong><p>Int. Airport</p></div>
+                    <div class="adv-item"><i class="fa-solid fa-briefcase"></i><strong>15 min</strong><p>Business Hub</p></div>
+                    <div class="adv-item"><i class="fa-solid fa-ship"></i><strong>20 min</strong><p>Seaport</p></div>
+                </div>
+            </div>
+
+            <div class="ai-chat-widget">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" alt="AI Agent">
+                <div class="chat-text">
+                    <strong>Hi! I'm here to help you</strong>
+                    <p>find your dream home in Dholera Smart City.</p>
+                </div>
+                <span class="online-dot"></span>
+            </div>
+        </aside>
+    </div>
+
+    <div class="floating-audio-btn">
+        <i class="fa-solid fa-headphones"></i>
+    </div>
+
+    <div id="booking-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="toggleModal()"><i class="fa-solid fa-xmark"></i></button>
+            <h3>Schedule a Private Site Visit</h3>
+            <p>Experience the future of Dholera firsthand. Enter your details below.</p>
+            <form id="modal-form" onsubmit="handleFormSubmit(event)">
+                <input type="text" placeholder="Your Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <select required>
+                    <option value="" disabled selected>Select Preferred Property</option>
+                    <option value="skyline">Skyline Heights</option>
+                    <option value="sunrise">Sunrise Residency</option>
+                    <option value="greenfield">Greenfield Enclave</option>
+                </select>
+                <button type="submit" class="btn-primary w-full text-center">Confirm Registration</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="dynamic-nav-modal" class="modal-overlay">
+        <div class="dynamic-modal-content">
+            <button class="modal-close" onclick="toggleNavModal()"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="modal-dynamic-header">
+                <div class="header-icon-badge" id="modal-badge-icon">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+                <h3 id="modal-tab-title">Tab Title</h3>
+                <p id="modal-tab-subtitle" class="tab-subtitle-tag">Subheading text information</p>
+            </div>
+
+            <div id="modal-dynamic-body" class="modal-dynamic-body">
+                </div>
+
+            <div class="modal-action-footer" id="modal-dynamic-footer">
+                <button class="btn-primary w-full text-center" onclick="toggleNavModal()">Acknowledge & Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects-overlay" class="modal-overlay">
+        <div class="projects-matrix-content">
+            <button class="modal-close" onclick="toggleProjectsOverlay()"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="matrix-header">
+                <span class="tagline">DHOLERA SMART CITY ARCHIVES</span>
+                <h2>Master Project Matrix</h2>
+                <p>Filter and navigate through premium authorized developments across investment zones.</p>
+                
+                <div class="matrix-filters">
+                    <button class="filter-btn active" onclick="filterProjects('all')">All Properties</button>
+                    <button class="filter-btn" onclick="filterProjects('residential')">Residential</button>
+                    <button class="filter-btn" onclick="filterProjects('commercial')">Commercial</button>
+                </div>
+            </div>
+
+            <div class="matrix-grid">
+                <div class="matrix-item-card" data-category="residential">
+                    <span class="status-badge open">Booking Open</span>
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=400" alt="Sunrise">
+                    <div class="matrix-card-body">
+                        <h4>Sunrise Residency</h4>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Central Dholera</p>
+                        <div class="progress-container">
+                            <div class="progress-bar-label"><span>Construction Phase 1</span><strong>85%</strong></div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="matrix-card-footer">
+                            <span class="price-chip">From ₹45 Lacs</span>
+                            <button class="btn-select-matrix" onclick="loadProjectDirectly('Sunrise Residency', 'Central Dholera', '跑45 Lacs*', '2 & 3 BHK Apartments', 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=500')">View On Board</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="matrix-item-card" data-category="residential">
+                    <span class="status-badge open">Featured</span>
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=400" alt="Skyline">
+                    <div class="matrix-card-body">
+                        <h4>Skyline Heights</h4>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Global Gate, Dholera</p>
+                        <div class="progress-container">
+                            <div class="progress-bar-label"><span>Construction Phase 2</span><strong>40%</strong></div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 40%; background: var(--accent-blue);"></div></div>
+                        </div>
+                        <div class="matrix-card-footer">
+                            <span class="price-chip">From ₹78 Lacs</span>
+                            <button class="btn-select-matrix" onclick="loadProjectDirectly('Skyline Heights', 'Global Gate, Dholera', '₹ 78 Lacs*', '3 & 4 BHK Luxury Apartments', 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=500')">View On Board</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="matrix-item-card" data-category="commercial">
+                    <span class="status-badge closed">Sold Out</span>
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400" alt="Nexus">
+                    <div class="matrix-card-body">
+                        <h4>Nexus Tech Plaza</h4>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Knowledge & IT Zone</p>
+                        <div class="progress-container">
+                            <div class="progress-bar-label"><span>Finished / Handover</span><strong>100%</strong></div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 100%; background: #00ff66;"></div></div>
+                        </div>
+                        <div class="matrix-card-footer">
+                            <span class="price-chip">Commercial</span>
+                            <button class="btn-select-matrix" disabled style="opacity:0.5; cursor:not-allowed;">Fully Booked</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery-hub-overlay" class="modal-overlay">
+        <div class="gallery-hub-content">
+            <button class="modal-close" onclick="toggleGalleryHub()"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="hub-split-layout">
+                <div class="hub-media-side">
+                    <div class="main-cinematic-stage">
+                        <img id="hub-main-view" src="" alt="Cinematic Stage Image">
+                        <span class="image-counter-tag" id="hub-img-counter">Image 1 of 4</span>
+                    </div>
+                    <div class="hub-thumbnails-strip" id="hub-thumb-strip">
+                        </div>
+                </div>
+
+                <div class="hub-details-side">
+                    <span class="project-mini-tag" id="hub-mini-tag">PREMIUM DEVELOPMENT</span>
+                    <h2 id="hub-project-title">Property Name</h2>
+                    <p class="location" id="hub-project-location"><i class="fa-solid fa-location-dot"></i> Location</p>
+                    
+                    <div class="animated-divider-line"></div>
+                    
+                    <div class="detailed-explanation-scroll">
+                        <h3>Architectural Overview</h3>
+                        <p class="deep-narrative-text" id="hub-deep-description">
+                            Detailed narrative block loading dynamically...
+                        </p>
+
+                        <h3>Engineering Specifications</h3>
+                        <div class="specs-grid-layout">
+                            <div class="spec-tile">
+                                <i class="fa-solid fa-compass"></i>
+                                <div><span>Orientation</span><strong id="spec-orient">Vastu Compliant / East</strong></div>
+                            </div>
+                            <div class="spec-tile">
+                                <i class="fa-solid fa-maximize"></i>
+                                <div><span>Carpet Area</span><strong id="spec-area">1,850 - 2,900 Sq.Ft.</strong></div>
+                            </div>
+                            <div class="spec-tile">
+                                <i class="fa-solid fa-couch"></i>
+                                <div><span>Furnishing</span><strong id="spec-furnish">Semi-Automated Smart</strong></div>
+                            </div>
+                            <div class="spec-tile">
+                                <i class="fa-solid fa-leaf"></i>
+                                <div><span>Green Rating</span><strong id="spec-green">IGBC Platinum Certified</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hub-action-row">
+                        <button class="btn-primary w-full text-center" onclick="toggleGalleryHub(); toggleModal();">Initiate Priority Booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ecosystem-intelligence-bar">
+    
+    <div class="eco-status-widget">
+        <i class="fa-solid fa-leaf"></i>
+        <div class="eco-details">
+            <strong>AQI: 24 • Excellent</strong>
+            <p>Dholera Eco-Grid Certified</p>
+        </div>
+    </div>
+
+    <div class="investment-ticker-wrap">
+        <div class="ticker-track">
+            <div class="ticker-item">🚀 Phase 1 Infrastructure: <span>100% Operational</span></div>
+            <div class="ticker-item">📈 Avg. Land Appreciation: <span>+24.8% YOY</span></div>
+            <div class="ticker-item">🏢 Global Gate Commercial Hub: <span>Handover Commenced</span></div>
+            <div class="ticker-item">⚡ Smart Solar Grid: <span>Online</span></div>
+            <div class="ticker-item">🚀 Phase 1 Infrastructure: <span>100% Operational</span></div>
+            <div class="ticker-item">📈 Avg. Land Appreciation: <span>+24.8% YOY</span></div>
+            <div class="ticker-item">🏢 Global Gate Commercial Hub: <span>Handover Commenced</span></div>
+        </div>
+    </div>
+
+    <div class="layer-toggle-container">
+        <button class="layer-pill active" onclick="handleLayerSwitch(this, 'Zoning View')"><i class="fa-solid fa-map"></i> Zoning</button>
+        <button class="layer-pill" onclick="handleLayerSwitch(this, 'Transit Overlay')"><i class="fa-solid fa-train-subway"></i> Transit</button>
+    </div>
+
+</div>
+
+<div class="blueprint-master-section">
+    <div class="blueprint-header-row">
+        <div>
+            <span class="tagline">ARCHITECTURAL SCHEMATICS</span>
+            <h3>Ecosystem Structural Layouts</h3>
+        </div>
+        
+        <div class="blueprint-pills">
+            <button class="layout-pill active" onclick="switchBlueprintSuite('2bhk', this)">
+                <span class="pill-title">2 BHK Smart</span>
+                <span class="pill-spec">1,450 Sq.Ft.</span>
+                <div class="pill-glow-line"></div>
+            </button>
+            
+            <button class="layout-pill" onclick="switchBlueprintSuite('3bhk', this)">
+                <span class="pill-title">3 BHK Suite</span>
+                <span class="pill-spec">2,100 Sq.Ft.</span>
+                <div class="pill-glow-line"></div>
+            </button>
+            
+            <button class="layout-pill" onclick="switchBlueprintSuite('4bhk', this)">
+                <span class="pill-title">4 BHK Luxury</span>
+                <span class="pill-spec">2,900 Sq.Ft.</span>
+                <div class="pill-glow-line"></div>
+            </button>
+        </div>
+    </div>
+
+    <div class="blueprint-display-grid">
+        <div class="blueprint-canvas-stage">
+            <div class="blueprint-wrapper">
+                <svg class="blueprint-svg-bg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="rgba(0, 210, 255, 0.15)" stroke-width="1" fill="none">
+                        <path d="M 0,50 L 400,50 M 0,100 L 400,100 M 0,150 L 400,150 M 0,200 L 400,200 M 0,250 L 400,250" />
+                        <path d="M 50,0 L 50,300 M 100,0 L 100,300 M 150,0 L 150,300 M 200,0 L 200,300 M 250,0 L 250,300 M 300,0 L 300,300 M 350,0 L 350,300" />
+                    </g>
+                </svg>
+                
+                <img id="blueprint-main-graphic" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&q=80&w=600" alt="Master Layout Schematic">
+                
+                <div class="blueprint-pointer" style="top: 25%; left: 30%;" data-target="living">
+                    <div class="sonar-ring"></div><i class="fa-solid fa-expand"></i>
+                </div>
+                <div class="blueprint-pointer" style="top: 45%; left: 75%;" data-target="automation">
+                    <div class="sonar-ring"></div><i class="fa-solid fa-microchip"></i>
+                </div>
+                <div class="blueprint-pointer" style="top: 75%; left: 40%;" data-target="terrace">
+                    <div class="sonar-ring"></div><i class="fa-solid fa-cloud-sun"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="blueprint-specifications-side">
+            <div class="layout-detail-box active" id="layout-zone-living">
+                <div class="zone-tag"><i class="fa-solid fa-vector-square"></i> Area Focus</div>
+                <h4>Optimized Spatial Volume Living Core</h4>
+                <p>Designed with a continuous open-air engineering flow that joins dining matrix modules directly with exterior light wells to boost thermal cycling stability.</p>
+            </div>
+
+            <div class="layout-detail-box" id="layout-zone-automation">
+                <div class="zone-tag"><i class="fa-solid fa-cpu"></i> Smart Node</div>
+                <h4>Integrated IoT Environmental Hub</h4>
+                <p>Central structural spine embedded with centralized optical fiber hookups. Direct hardware links manage pneumatic vents and radiant solar climate presets.</p>
+            </div>
+
+            <div class="layout-detail-box" id="layout-zone-terrace">
+                <div class="zone-tag"><i class="fa-solid fa-wind"></i> Eco Space</div>
+                <h4>Aerodynamic Panoramic Sky Terrace</h4>
+                <p>Features structural sound barriers and green space thermal shields, offering expansive views over Dholera Smart City’s unified transit corridors.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="map-popup-overlay" class="modal-overlay">
+        <div class="map-popup-content">
+            <button class="modal-close" onclick="toggleMapPopup()"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="map-popup-header">
+                <h3 id="map-popup-title">City Infrastructure Map</h3>
+                <p id="map-popup-subtitle">Loading live data layers...</p>
+            </div>
+
+            <div class="map-popup-body-frame">
+                <div class="map-glow-pointer" style="top: 30%; left: 45%;"><span>Command Center Alpha</span></div>
+                <div class="map-glow-pointer" style="top: 60%; left: 25%;"><span>Residential Grid Phase 1</span></div>
+                <div class="map-glow-pointer" style="top: 20%; left: 70%;"><span>Aerotropolis Transit Link</span></div>
+            </div>
+
+            <div class="modal-action-footer">
+                <button class="btn-primary w-full text-center" onclick="toggleMapPopup()">Close Map Viewer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
