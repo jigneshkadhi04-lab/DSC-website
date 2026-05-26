@@ -1911,3 +1911,361 @@ body {
     0% { transform: translateY(0); }
     100% { transform: translateY(-5px); }
 }
+
+/* ============================= */
+/* MOBILE RESPONSIVE DESIGN */
+/* ============================= */
+
+@media screen and (max-width:768px){
+
+/* GLOBAL */
+body{
+    height:auto;
+    overflow-x:hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* MAIN CONTAINER */
+.dashboard-container{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:auto;
+    overflow:hidden;
+}
+
+/* ================= LEFT SIDEBAR ================= */
+
+.hero-sidebar{
+    width:100%;
+    padding:18px;
+    border-right:none;
+    border-bottom:1px solid var(--glass-border);
+    gap:22px;
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-icon{
+    width:28px;
+    height:28px;
+}
+
+.logo h1{
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+.logo p{
+    font-size:8px;
+    letter-spacing:1px;
+}
+
+/* HERO IMAGE */
+.model-placeholder{
+    width:100%;
+    height:230px;
+    border-radius:18px;
+    overflow:hidden;
+    margin-bottom:18px;
+}
+
+.model-placeholder img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+}
+
+/* HERO TEXT */
+.tagline{
+    font-size:8px;
+    letter-spacing:1.5px;
+}
+
+.hero-text-group h2{
+    font-size:34px;
+    line-height:1.2;
+    margin-bottom:12px;
+}
+
+.hero-text-group p{
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+/* BUTTON */
+.btn-primary{
+    width:100%;
+    justify-content:center;
+    padding:14px;
+    font-size:13px;
+}
+
+/* BADGE */
+.badge-card{
+    padding:14px;
+    gap:12px;
+    border-radius:14px;
+}
+
+.badge-icon{
+    font-size:20px;
+}
+
+.badge-card h4{
+    font-size:12px;
+}
+
+.badge-card p{
+    font-size:10px;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content{
+    width:100%;
+    padding:20px 16px;
+}
+
+/* NAVBAR */
+.navbar{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+}
+
+/* NAV LINKS */
+.nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.nav-links a{
+    font-size:12px;
+}
+
+/* NAV ACTIONS */
+.nav-actions{
+    width:100%;
+    display:flex;
+    gap:10px;
+}
+
+.btn-action{
+    flex:1;
+    text-align:center;
+}
+
+/* SCROLL INDICATOR */
+.scroll-indicator{
+    margin-top:10px;
+    font-size:10px;
+}
+
+/* ================= PROPERTY CARDS ================= */
+
+.cards-slider{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
+    margin:30px 0;
+}
+
+.property-card{
+    width:100%;
+    max-width:100%;
+    border-radius:22px;
+}
+
+.property-card.active{
+    transform:none;
+}
+
+.property-card:hover{
+    transform:none;
+}
+
+/* CARD IMAGE */
+.card-img-wrapper{
+    height:240px;
+    border-radius:18px;
+}
+
+.card-details h3{
+    font-size:17px;
+}
+
+.price{
+    font-size:16px;
+}
+
+.bhk{
+    font-size:10px;
+}
+
+/* ================= BOTTOM STATS ================= */
+
+.bottom-branding h2{
+    font-size:22px;
+    line-height:1.4;
+    margin-bottom:25px;
+}
+
+.stats-row{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.stat-item strong{
+    font-size:18px;
+}
+
+.stat-item p{
+    font-size:10px;
+}
+
+/* ================= RIGHT PANEL ================= */
+
+.details-panel{
+    width:100%;
+    padding:20px 16px;
+    border-left:none;
+    border-top:1px solid var(--glass-border);
+    gap:20px;
+}
+
+.property-focus-info h2{
+    font-size:26px;
+}
+
+/* AMENITIES */
+.amenity-grid{
+    grid-template-columns:1fr;
+}
+
+/* MAIN PREVIEW IMAGE */
+.media-preview-box #focus-media-img{
+    height:220px;
+}
+
+/* GALLERY */
+.gallery-thumbs{
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+}
+
+.gallery-thumbs img{
+    height:55px;
+}
+
+/* DESCRIPTION */
+.property-desc{
+    font-size:12px;
+    line-height:1.7;
+}
+
+/* BUTTON ROW */
+.action-row{
+    flex-direction:column;
+}
+
+/* LOCATION ADVANTAGES */
+.advantage-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.adv-item{
+    padding:12px 6px;
+}
+
+/* ================= MODALS ================= */
+
+.modal-content,
+.dynamic-modal-content,
+.projects-matrix-content,
+.gallery-hub-content{
+    width:95%;
+    padding:20px;
+    max-height:90vh;
+    overflow-y:auto;
+    border-radius:20px;
+}
+
+/* PROJECT GRID */
+.matrix-grid{
+    grid-template-columns:1fr;
+}
+
+/* GALLERY HUB */
+.hub-split-layout{
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.main-cinematic-stage{
+    height:240px;
+}
+
+.hub-thumbnails-strip{
+    gap:10px;
+}
+
+.hub-thumbnails-strip img{
+    height:60px;
+}
+
+/* SPEC GRID */
+.specs-grid-layout{
+    grid-template-columns:1fr;
+}
+
+/* BLUEPRINT */
+.blueprint-display-grid{
+    grid-template-columns:1fr;
+}
+
+/* SETTINGS PANEL */
+.settings-drawer{
+    width:100%;
+    right:-100%;
+    padding:20px;
+}
+
+/* AUDIO BUTTON */
+.floating-audio-btn{
+    width:50px;
+    height:50px;
+    bottom:15px;
+    left:15px;
+    z-index:999;
+}
+
+/* FIX IMAGES */
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+/* REMOVE HORIZONTAL OVERFLOW */
+*{
+    max-width:100%;
+}
+
+/* SMOOTH SCROLL */
+html{
+    scroll-behavior:smooth;
+}
+
+}
